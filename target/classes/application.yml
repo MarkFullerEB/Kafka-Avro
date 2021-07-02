@@ -1,0 +1,12 @@
+kafka:
+  bootstrap-servers: http://0.0.0.0:9092
+  topic:
+    avro: users
+  schema-registry: http://0.0.0.0:8081
+
+spring:
+  kafka:
+    consumer:
+      group-id: group_id
+
+
