@@ -9,23 +9,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringKafkaApplication implements CommandLineRunner {
-
-    @Autowired
-    private Sender sender;
+public class SpringKafkaApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringKafkaApplication.class, args);
-    }
-
-    @Override
-    public void run(String... strings) throws Exception {
-        User user = User.newBuilder()
-                .setFavoriteColor("red")
-                .setFavoriteNumber(1)
-                .setName("Ammar Mansoor")
-                .build();
-
-        sender.send(user);
     }
 }
